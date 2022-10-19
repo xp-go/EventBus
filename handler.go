@@ -23,7 +23,7 @@ func (p Pub) Register(handler Handler) error {
 	if !ok {
 		return fmt.Errorf("topic function no exist")
 	}
-
+	// xxxx
 	valueOf := reflect.ValueOf(handler)
 	results := name.Func.Call([]reflect.Value{valueOf})
 	if len(results) != 1 {
